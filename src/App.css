@@ -1,7 +1,16 @@
+@import '~antd/dist/antd.css';
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
+main {
+  flex:1
+}
+ p {
+   margin-bottom: 0;
+ }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
