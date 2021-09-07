@@ -2,6 +2,9 @@ import React from 'react'
 // import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
+import { observer } from "mobx-react-lite"
+import Login from '../store/index'
+
 const Container=styled.header`
   & {
       /* display:flex; */
@@ -21,11 +24,12 @@ const Container=styled.header`
       color: rgb(97, 218, 251);
   }
 `
-function Header(){
+let Header=observer(()=>{
+    let user=new Login()
     return(
-    
+           
         <Container>
-
+            {user}
           <NavLink  exact  to="/">home</NavLink>
           <NavLink  to="/about">about</NavLink>
           <NavLink  to="/mine">mine</NavLink>
@@ -34,4 +38,5 @@ function Header(){
       
     )
 }
+   )
 export default Header

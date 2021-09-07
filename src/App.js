@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={ <Spin 
-      delay={1000}
+      delay={30000}
       size="small" />}>
         <Router>
             <Header>
